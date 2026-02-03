@@ -1,5 +1,6 @@
 import React from 'react';
-import { Instagram, Facebook, Twitter, Mail, ArrowUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Instagram, Facebook, Twitter, Mail, ArrowUp, ChevronRight } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -8,106 +9,124 @@ const Footer = () => {
 
   const footerLinks = [
     {
-      title: 'Collection',
-      links: ['The Cellar', 'Private Reserve', 'Gift Sets', 'Wine Club'],
+      title: 'Heritage',
+      links: [
+        { name: 'Our Story', href: '/our-story' },
+        { name: 'Our People', href: '/our-people' },
+        { name: 'Our Vineyards', href: '/our-vineyards' },
+        { name: 'Sustainability', href: '/sustainability' },
+      ],
     },
     {
-      title: 'Estate',
-      links: ['Our Story', 'Vineyards', 'Sustainability', 'Visit Us'],
+      title: 'Collection',
+      links: [
+        { name: 'Red Wine', href: '/wines/red' },
+        { name: 'White Wine', href: '/wines/white' },
+        { name: 'Rosé Wine', href: '/wines/rose' },
+        { name: 'Rare Vintages', href: '/vintages' },
+      ],
+    },
+    {
+      title: 'The Estate',
+      links: [
+        { name: 'Book a Tour', href: '/book-tour' },
+        { name: 'Private Tastings', href: '/tastings' },
+        { name: 'The Club', href: '/club' },
+        { name: 'Contact', href: '/contact' },
+      ],
     },
   ];
 
   return (
-    <footer className="bg-[#0c0a09] text-stone-500 py-15 md:pt-32 px-6 md:px-12 border-t border-stone-900/50">
-      <div className="max-w-7xl mx-auto">
+    <footer className="bg-[#0c0a09] text-stone-400 py-20 md:pt-32 pb-12 px-6 md:px-16 border-t border-stone-900">
+      <div className="max-w-[1400px] mx-auto">
         
-        {/* Main Grid: Compact & Balanced */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-16 md:mb-24">
+        {/* Top Section: Brand Statement & Newsletter */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24 items-start">
           
-          {/* Newsletter Section - 5 Columns */}
-          <div className="md:col-span-5 flex flex-col justify-between">
-            <div>
-              <h3 className="text-stone-100 font-serif text-2xl md:text-3xl italic mb-4 md:mb-6">
-                Join the Private List
-              </h3>
-              <p className="text-xs md:text-sm font-light leading-relaxed max-w-sm mb-8 text-stone-400 font-sans">
-                Receive exclusive access to vintage releases and invitation-only events at the estate.
-              </p>
-              <form className="relative flex items-center group max-w-sm">
-                <input 
-                  type="email" 
-                  placeholder="Email Address"
-                  className="w-full bg-transparent border-b border-stone-800 py-4 text-xs focus:outline-none focus:border-amber-900/50 transition-colors text-stone-200 placeholder:text-stone-600"
-                />
-                <button className="absolute right-0 flex items-center gap-2 group">
-                  <span className="uppercase text-[9px] tracking-[0.3em] font-bold text-stone-100 group-hover:text-amber-200 transition-colors font-sans">
-                    Join
-                  </span>
-                  <div className="w-6 h-[0.5px] bg-amber-200/50 group-hover:w-10 transition-all duration-500" />
-                </button>
-              </form>
+          {/* Brand Identity */}
+          <div className="lg:col-span-4 space-y-8">
+            <div className="flex flex-col">
+              <h2 className="text-3xl md:text-4xl font-serif tracking-[0.25em] text-stone-100 leading-none">
+                AMBI VINES
+              </h2>
+              <span className="text-[10px] tracking-[0.5em] text-amber-900/60 mt-3 font-light uppercase">
+                Est. MCMXXIV • Napa Valley
+              </span>
             </div>
-            
-            {/* Social Icons for Desktop */}
-            <div className="hidden md:flex space-x-6 mt-12 text-stone-600">
-              <Instagram size={16} className="hover:text-amber-200 cursor-pointer transition-colors" />
-              <Facebook size={16} className="hover:text-amber-200 cursor-pointer transition-colors" />
-              <Twitter size={16} className="hover:text-amber-200 cursor-pointer transition-colors" />
-              <Mail size={16} className="hover:text-amber-200 cursor-pointer transition-colors" />
+            <p className="text-sm font-light leading-relaxed max-w-xs text-stone-500 font-sans italic">
+              "Crafting the intersection of ancestral tradition and modern elegance in every bottle."
+            </p>
+            <div className="flex space-x-8 pt-4">
+              {[Instagram, Facebook, Twitter, Mail].map((Icon, idx) => (
+                <a key={idx} href="#" className="hover:text-amber-200/70 transition-all duration-500 transform hover:-translate-y-1">
+                  <Icon size={18} strokeWidth={1.2} />
+                </a>
+              ))}
             </div>
           </div>
 
-          {/* Brand Mark - Center 2 Columns */}
-          <div className="md:col-span-2 flex flex-col items-center justify-center border-y md:border-y-0 md:border-x border-stone-900/50 py-12 md:py-0">
-             <h1 className="text-2xl md:text-3xl font-serif tracking-[0.3em] text-stone-100 mb-1">
-               AMBI VINES
-             </h1>
-             <div className="w-8 h-[1px] bg-amber-900/40 mb-2" />
-             <span className="text-[8px] tracking-[0.4em] uppercase opacity-40 font-sans">
-               MCMXXIV
-             </span>
-          </div>
-
-          {/* Links Section - 5 Columns */}
-          <div className="md:col-span-5 grid grid-cols-2 gap-8 md:pl-16">
+          {/* Navigation Links */}
+          <div className="lg:col-span-5 grid grid-cols-2 md:grid-cols-3 gap-12">
             {footerLinks.map((group) => (
-              <div key={group.title}>
-                <h4 className="text-stone-100 uppercase text-[10px] tracking-[0.4em] font-bold mb-6 font-sans">
+              <div key={group.title} className="space-y-8">
+                <h4 className="text-stone-200 uppercase text-[10px] tracking-[0.3em] font-semibold border-b border-stone-900 pb-4">
                   {group.title}
                 </h4>
                 <ul className="space-y-4">
                   {group.links.map((link) => (
-                    <li key={link}>
-                      <a href="#" className="text-[11px] uppercase tracking-widest font-light hover:text-amber-100 transition-colors duration-300 font-sans">
-                        {link}
-                      </a>
+                    <li key={link.name}>
+                      <Link 
+                        to={link.href} 
+                        className="text-[12px] text-stone-500 hover:text-amber-100 transition-all duration-300 flex items-center group"
+                      >
+                        <ChevronRight size={10} className="mr-0 opacity-0 group-hover:opacity-100 group-hover:mr-2 transition-all duration-300 text-amber-900/50" />
+                        {link.name}
+                      </Link>
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
           </div>
+
+          {/* Newsletter Section */}
+          <div className="lg:col-span-3 bg-stone-900/20 p-8 border border-stone-900/50 rounded-sm">
+            <h4 className="text-stone-100 font-serif text-lg italic mb-4 text-center">The Private List</h4>
+            <p className="text-[11px] leading-relaxed text-stone-500 mb-6 text-center uppercase tracking-widest">
+              Exclusive releases & events
+            </p>
+            <form className="space-y-4">
+              <input 
+                type="email" 
+                placeholder="EMAIL ADDRESS"
+                className="w-full bg-transparent border-b border-stone-800 py-3 text-[10px] tracking-widest focus:outline-none focus:border-amber-900/50 transition-colors text-stone-200 placeholder:text-stone-700"
+              />
+              <button className="w-full py-4 border border-stone-800 text-[9px] tracking-[0.4em] uppercase font-bold hover:bg-stone-100 hover:text-black transition-all duration-700">
+                Subscribe
+              </button>
+            </form>
+          </div>
         </div>
 
-        {/* Bottom Bar: Legal & Back to Top */}
-        <div className="flex flex-col md:flex-row items-center justify-between pt-10 md:pt-16 border-t border-stone-900/50">
-          <div className="flex flex-col md:flex-row items-center gap-6 text-[9px] tracking-[0.2em] uppercase opacity-40 font-sans">
-            <p>© 2026 AMBI VINES Estate.</p>
-            <div className="hidden md:block w-px h-3 bg-stone-800" />
-            <div className="flex gap-6">
-              <a href="#" className="hover:text-stone-100 transition-colors">Privacy</a>
-              <a href="#" className="hover:text-stone-100 transition-colors">Terms</a>
+        {/* Bottom Bar */}
+        <div className="flex flex-col md:flex-row items-center justify-between pt-12 border-t border-stone-900/80">
+          <div className="flex flex-col md:flex-row items-center gap-8 text-[10px] tracking-[0.2em] font-light text-stone-600">
+            <p>© 2026 AMBI VINES ESTATE. ALL RIGHTS RESERVED.</p>
+            <div className="flex gap-8 uppercase">
+              <a href="#" className="hover:text-stone-300 transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-stone-300 transition-colors">Terms of Service</a>
             </div>
           </div>
 
           <button 
             onClick={scrollToTop}
-            className="mt-8 md:mt-0 group flex items-center gap-4 text-stone-100 transition-all"
+            className="mt-12 md:mt-0 flex flex-col items-center gap-3 group"
           >
-            <span className="text-[9px] uppercase tracking-[0.4em] opacity-40 group-hover:opacity-100 transition-opacity font-sans">Back to top</span>
-            <div className="p-3 border border-stone-800 rounded-full group-hover:border-amber-900/50 transition-colors">
-              <ArrowUp size={14} strokeWidth={1.5} />
+            <div className="relative flex items-center justify-center w-12 h-12 border border-stone-800 rounded-full group-hover:border-amber-900/50 transition-all duration-500">
+              <ArrowUp size={16} strokeWidth={1} className="group-hover:-translate-y-1 transition-transform duration-500" />
             </div>
+            <span className="text-[8px] uppercase tracking-[0.5em] text-stone-600 group-hover:text-stone-200 transition-colors">Top</span>
           </button>
         </div>
       </div>

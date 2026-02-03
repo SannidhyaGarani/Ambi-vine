@@ -23,9 +23,9 @@ const Header = () => {
         name: 'About Us', 
         href: '#',
         subLinks: [
-          { name: 'Our Story', href: '/about/story' },
-          { name: 'Our People', href: '/about/people' },
-          { name: 'Our Vineyards', href: '/about/vineyards' },
+          { name: 'Our Story', href: '/our-story' },
+          { name: 'Our People', href: '/our-people' },
+          { name: 'Our Vineyards', href: '/our-vineyards' },
         ]
       },
       { 
