@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Preloader = () => {
     const [progress, setProgress] = useState(0);
     const [isVisible, setIsVisible] = useState(true);
     const [phase, setPhase] = useState('enter'); // 'enter', 'hold', 'exit'
-    const progressRef = useRef(null);
     
     // Enhanced loading simulation with realistic progress
     useEffect(() => {

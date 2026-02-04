@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import { motion as Motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 
 const images = [
   {
@@ -52,7 +52,7 @@ const StorySection = () => {
 
         {/* Progress Bar */}
         <div className="absolute left-8 top-1/2 -translate-y-1/2 h-32 w-[1px] bg-stone-300 hidden md:block">
-          <motion.div
+          <Motion.div
             style={{ scaleY: scrollYProgress }}
             className="w-full bg-stone-800 origin-top h-full"
           />
@@ -61,7 +61,7 @@ const StorySection = () => {
         {/* TEXT AREA */}
         <div className="flex-none w-full max-w-4xl mx-auto px-6 text-center z-40 mb-10">
           <AnimatePresence mode="wait">
-            <motion.div
+            <Motion.div
               key={index}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -80,7 +80,7 @@ const StorySection = () => {
               <p className="text-stone-600 font-light max-w-md mx-auto text-xs md:text-sm leading-relaxed">
                 {images[index].description}
               </p>
-            </motion.div>
+            </Motion.div>
           </AnimatePresence>
         </div>
 
@@ -89,7 +89,7 @@ const StorySection = () => {
           <div className="relative w-full h-[70vh]">
             
             {/* Base Layer */}
-            <motion.div style={{ scale: scaleBackground }} className="absolute inset-0">
+            <Motion.div style={{ scale: scaleBackground }} className="absolute inset-0">
               <div className="w-full h-full rounded-sm overflow-hidden shadow-xl">
                 <img
                   src={images[0].src}
@@ -97,10 +97,10 @@ const StorySection = () => {
                   alt="Layer 1"
                 />
               </div>
-            </motion.div>
+            </Motion.div>
 
             {/* Layer 2 */}
-            <motion.div style={{ y: y2 }} className="absolute inset-0 z-10">
+            <Motion.div style={{ y: y2 }} className="absolute inset-0 z-10">
               <div className="w-full h-full rounded-sm overflow-hidden shadow-2xl border-t border-white/20">
                 <img
                   src={images[1].src}
@@ -108,10 +108,10 @@ const StorySection = () => {
                   alt="Layer 2"
                 />
               </div>
-            </motion.div>
+            </Motion.div>
 
             {/* Layer 3 */}
-            <motion.div style={{ y: y3 }} className="absolute inset-0 z-20">
+            <Motion.div style={{ y: y3 }} className="absolute inset-0 z-20">
               <div className="w-full h-full rounded-sm overflow-hidden shadow-2xl border-t border-white/20">
                 <img
                   src={images[2].src}
@@ -119,7 +119,7 @@ const StorySection = () => {
                   alt="Layer 3"
                 />
               </div>
-            </motion.div>
+            </Motion.div>
 
           </div>
         </div>
