@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import Button from './Button';
 // import Header from '../components/Header';
 // import Footer from './Footer';
 import WineCard from './WineCard';
@@ -89,13 +90,10 @@ const WinesByCategory = () => {
       <section className="py-24 md:py-32 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           {/* Back Button */}
-          <button
-            onClick={() => navigate('/')}
-            className="group flex items-center gap-3 mb-12 md:mb-16 text-stone-600 hover:text-stone-900 transition-colors duration-300"
-          >
+          <Button variant="link" onClick={() => navigate('/')} className="group flex items-center gap-3 mb-12 md:mb-16 text-stone-600 hover:text-stone-900 transition-colors duration-300">
             <ArrowLeft size={18} className="transition-transform group-hover:-translate-x-1" />
             <span className="text-sm uppercase tracking-[0.2em] font-sans">Back to Our Wines</span>
-          </button>
+          </Button>
 
           {/* Intro Section */}
           <div className="mb-16 md:mb-24">

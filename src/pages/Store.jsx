@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaMapMarkerAlt, FaPhoneAlt, FaUserTie, FaChevronRight } from "react-icons/fa";
+import Button from '../Components/Button';
 
 const outletData = [
   { id: 1, city: "Ratlam", name: "Ambi The Wine Shop", address: "Jhabua Road, Village & Post – Titari, Ratlam (M.P)", type: "Company Outlet", manager: "Jitendra Patidar", phone: "90090 77255" },
@@ -93,9 +94,9 @@ const OutletPage = () => {
                 <div className="flex justify-between items-start mb-8">
                   <span className={`text-[9px] uppercase tracking-widest px-3 py-1 rounded-full border ${
                     shop.type.includes('Company') 
-                    ? 'border-amber-200 bg-amber-50 text-amber-800' 
+                    ? 'border-amber-200 bg-amber-50' 
                     : 'border-stone-200 bg-stone-50 text-stone-600'
-                  }`}>
+                  }`} style={shop.type.includes('Company') ? { color: '#811331' } : {}}>
                     {shop.type}
                   </span>
                   <FaMapMarkerAlt className="text-stone-300 group-hover:text-stone-900 transition-colors duration-500" />
@@ -127,12 +128,14 @@ const OutletPage = () => {
                     </div>
                   </div>
                   
-                  <button className="flex items-center justify-between w-full group/btn text-[10px] uppercase tracking-[0.3em] font-bold text-stone-900 pt-2">
-                    Get Directions
-                    <span className="w-8 h-8 rounded-full border border-stone-100 flex items-center justify-center group-hover/btn:bg-stone-900 group-hover/btn:text-white transition-all duration-300">
-                      <FaChevronRight size={10} />
+                  <Button variant="outline" className="w-full justify-between text-[10px] uppercase tracking-[0.3em] font-bold text-stone-900 pt-2">
+                    <span className="flex items-center justify-between w-full">
+                      Get Directions
+                      <span className="w-8 h-8 rounded-full border border-stone-100 flex items-center justify-center transition-colors duration-300">
+                        <FaChevronRight size={10} />
+                      </span>
                     </span>
-                  </button>
+                  </Button>
                 </div>
               </div>
             ))}

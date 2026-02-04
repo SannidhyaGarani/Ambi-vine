@@ -59,7 +59,7 @@ const Gallery = () => {
 
       {/* Header */}
       <div className="max-w-7xl mx-auto text-center pt-24 md:pt-32 mb-20 md:mb-28">
-        <span className="block text-[10px] tracking-[0.6em] uppercase text-stone-400 mb-6">
+        <span className="block text-[10px] tracking-[0.6em] uppercase mb-6" style={{ color: '#811331' }}>
           Visual Journal
         </span>
         <h1 className="font-serif italic text-stone-900 text-5xl md:text-6xl lg:text-7xl">
@@ -113,11 +113,17 @@ const Gallery = () => {
 
       {/* CTA */}
       <div className="text-center mt-24">
-        <button className="relative group px-14 py-4 border border-stone-300 overflow-hidden">
-          <span className="relative z-10 text-[11px] tracking-[0.45em] uppercase font-semibold text-stone-900 group-hover:text-white transition-colors duration-500">
+        <button
+          type="button"
+          className="group relative inline-flex items-center justify-center px-10 md:px-12 py-4 border border-[#811331] text-[#811331] overflow-hidden transition-all duration-300 ease-out hover:text-white"
+        >
+          <span className="relative z-10 text-[11px] tracking-[0.45em] uppercase font-semibold font-sans">
             Explore More Moments
           </span>
-          <div className="absolute inset-0 bg-stone-900 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
+          <div
+            className="absolute inset-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.25,1)]"
+            style={{ backgroundColor: '#811331' }}
+          />
         </button>
       </div>
 

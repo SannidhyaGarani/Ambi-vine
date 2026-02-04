@@ -18,7 +18,7 @@ const TourPage = () => {
 
   {/* Content */}
   <div className="relative max-w-4xl mx-auto">
-    <span className="text-[10px] uppercase tracking-[0.5em] text-white/70 mb-4 block font-bold">
+    <span className="text-[10px] uppercase tracking-[0.5em] text-[#f3d2dd] mb-4 block font-bold">
       Sensory Experience
     </span>
 
@@ -26,7 +26,7 @@ const TourPage = () => {
       Vineyard Tour & Tasting
     </h1>
 
-    <nav className="flex items-center justify-center space-x-3 text-[10px] uppercase tracking-widest text-white/70">
+    <nav className="flex items-center justify-center space-x-3 text-[10px] uppercase tracking-widest text-[#f3d2dd]">
       <a href="/" className="hover:text-white transition-colors">
         Home
       </a>
@@ -191,9 +191,17 @@ const TourPage = () => {
                         </div>
 
                         <div className="text-center pt-10">
-                            <button className="group relative px-12 py-5 bg-stone-900 text-white overflow-hidden rounded-full">
-                                <span className="relative z-10 text-[10px] tracking-[0.4em] uppercase font-bold">Request Booking</span>
-                                <div className="absolute inset-0 bg-stone-800 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                            <button
+                                type="submit"
+                                className="group relative inline-flex items-center justify-center px-12 py-4 border border-[#811331] text-[#811331] overflow-hidden rounded-full transition-all duration-300 ease-out hover:text-white"
+                            >
+                                <span className="relative z-10 text-[10px] tracking-[0.4em] uppercase font-bold">
+                                    Request Booking
+                                </span>
+                                <div
+                                    className="absolute inset-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.25,1)]"
+                                    style={{ backgroundColor: '#811331' }}
+                                />
                             </button>
                         </div>
                     </form>

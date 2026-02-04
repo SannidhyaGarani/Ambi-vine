@@ -5,8 +5,8 @@ const images = [
   {
     id: 1,
     subtitle: "The Terroir",
-    title: "Sun-Kissed Slopes",
-    description: "Our vines thrive in volcanic soil, nurtured by the unique microclimate of the Sahyadri range.",
+    title: "Central India’s Only & Fastest Growing Vineyard",
+    description: "From the heart of Madhya Pradesh, we craft wines rooted in passion, precision, and authenticity, with a vision to take Central India to the global stage.",
     src: "https://plus.unsplash.com/premium_photo-1680086880881-442721afe30c?w=600&auto=format&fit=crop&q=60",
   },
   {
@@ -73,7 +73,7 @@ const StorySection = () => {
                 {images[index].subtitle}
               </span> */}
 
-              <h2 className="text-3xl md:text-5xl font-serif text-stone-900 lowercase italic">
+              <h2 className="text-3xl md:text-5xl font-serif text-stone-900  italic">
                 {images[index].title}
               </h2>
 

@@ -23,7 +23,7 @@ const OurStory = () => {
 
         {/* Content */}
         <div className="relative max-w-4xl mx-auto">
-          <span className="text-[10px] uppercase tracking-[0.5em] text-white/70 mb-4 block font-bold">
+          <span className="text-[10px] uppercase tracking-[0.5em] text-[#f3d2dd] mb-4 block font-bold">
             The Heritage
           </span>
 
@@ -31,7 +31,7 @@ const OurStory = () => {
             Our Story
           </h1>
 
-          <nav className="flex items-center justify-center space-x-3 text-[10px] uppercase tracking-widest text-white/70">
+          <nav className="flex items-center justify-center space-x-3 text-[10px] uppercase tracking-widest text-[#f3d2dd]">
             <a href="/" className="hover:text-white transition-colors">
               Home
             </a>
@@ -57,7 +57,7 @@ const OurStory = () => {
                 />
               </div>
               <div className="absolute -bottom-8 -right-8 bg-[#F9F8F6] p-8 border border-stone-100 hidden md:block">
-                <p className="text-[10px] uppercase tracking-[0.4em] text-stone-400 font-bold rotate-90 origin-left translate-x-4">
+                <p className="text-[10px] uppercase tracking-[0.4em] font-bold rotate-90 origin-left translate-x-4" style={{ color: '#811331' }}>
                   Titari Estate
                 </p>
               </div>
@@ -92,7 +92,7 @@ const OurStory = () => {
                 {/* 3. SIGNATURE BLOCK */}
                 <div className="pt-16">
                   <div className="flex flex-col space-y-2">
-                    <span className="text-[10px] uppercase tracking-[0.3em] text-stone-400 font-bold">
+                    <span className="text-[10px] uppercase tracking-[0.3em] font-bold" style={{ color: '#811331' }}>
                       Founder & Visionary
                     </span>
                     <span className="text-4xl font-serif italic text-stone-900 tracking-tight">

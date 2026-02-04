@@ -46,7 +46,7 @@ const VineyardSection = ({ title, subtitle, description, image, reversed, label 
         {/* Text Side */}
         <div className="w-full lg:w-1/2 space-y-8">
           <div className="space-y-4">
-            <span className="text-[11px] uppercase tracking-[0.5em] text-stone-400 font-bold block">
+          <span className="text-[11px] uppercase tracking-[0.5em] font-bold block" style={{ color: '#811331' }}>
               {label}
             </span>
             <h2 className="text-4xl md:text-5xl font-serif italic text-stone-900 leading-tight">
@@ -154,7 +154,7 @@ const OurVineyards = () => {
 
       {/* 4. CLOSING STATEMENT */}
       <section className="py-40 px-6 text-center max-w-2xl mx-auto">
-        <h4 className="text-[11px] uppercase tracking-[0.4em] text-stone-400 font-bold mb-6">Experience the Source</h4>
+        <h4 className="text-[11px] uppercase tracking-[0.4em] font-bold mb-6" style={{ color: '#811331' }}>Experience the Source</h4>
         <p className="text-stone-800 font-serif text-2xl italic leading-relaxed">
           Every bottle of Ambi tells the story of our soil. We invite you to taste the landscape of Central India, distilled into its finest form.
         </p>

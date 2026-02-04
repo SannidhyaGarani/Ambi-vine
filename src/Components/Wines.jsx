@@ -65,7 +65,7 @@ const CategoryCard = ({ item, index, isVisible, onNavigate }) => {
     {/* Typography - Bold but compact spacing */}
     <div className="flex justify-between items-baseline border-b border-stone-200 pb-2">
       <h3 className="text-2xl md:text-3xl font-serif text-stone-900">{item.name}</h3>
-      <span className="text-[10px] uppercase tracking-[0.2em] text-amber-800/60 font-bold font-sans">
+      <span className="text-[10px] uppercase tracking-[0.2em] font-bold font-sans" style={{ color: 'rgba(129, 19, 49, 0.6)' }}>
         {item.description}
       </span>
     </div>
@@ -98,7 +98,7 @@ const OurWines = () => {
           }`}>
             Our <span className="italic">Wines</span>
           </h2>
-          <span className="hidden md:block text-[11px] uppercase tracking-[0.5em] text-stone-400 font-sans">
+          <span className="hidden md:block text-[11px] uppercase tracking-[0.5em] font-sans" style={{ color: '#811331' }}>
             Selection 2026
           </span>
         </div>
@@ -118,11 +118,17 @@ const OurWines = () => {
 
         {/* Minimalist Bottom CTA */}
         <div className="mt-16 md:mt-24 flex justify-end">
-          <button className="group flex items-center gap-4">
-            <span className="text-stone-900 uppercase text-[11px] tracking-[0.4em] font-bold font-sans">
+          <button
+            type="button"
+            className="group relative inline-flex items-center justify-center px-10 md:px-12 py-4 border border-[#811331] text-[#811331] overflow-hidden transition-all duration-300 ease-out hover:text-white"
+          >
+            <span className="relative z-10 uppercase text-[11px] tracking-[0.4em] font-bold font-sans">
               View Full Menu
             </span>
-            <div className="w-12 h-px bg-stone-300 group-hover:w-20 group-hover:bg-amber-800 transition-all duration-500" />
+            <div
+              className="absolute inset-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.25,1)]"
+              style={{ backgroundColor: '#811331' }}
+            />
           </button>
         </div>
 

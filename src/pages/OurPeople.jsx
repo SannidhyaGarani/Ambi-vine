@@ -19,16 +19,15 @@ const TeamMemberCard = ({ name, role, description, image, delay }) => {
   }, []);
 
   return (
-    <div 
+    <div
       ref={cardRef}
-      className={`group transition-all duration-1000 ease-out transform ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-      }`}
+      className={`group transition-all duration-1000 ease-out transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+        }`}
       style={{ transitionDelay: `${delay}ms` }}
     >
       <div className="relative aspect-[3/4] overflow-hidden rounded-2xl mb-6 bg-stone-200">
-        <img 
-          src={image} 
+        <img
+          src={image}
           alt={name}
           className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-in-out"
         />
@@ -36,7 +35,7 @@ const TeamMemberCard = ({ name, role, description, image, delay }) => {
       </div>
       <div className="space-y-2 px-1">
         <h3 className="text-2xl font-serif italic text-stone-900 leading-tight">{name}</h3>
-        <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-stone-400">{role}</p>
+        <p className="text-[10px] uppercase tracking-[0.3em] font-bold" style={{ color: '#811331' }}>{role}</p>
         <p className="pt-3 text-sm text-stone-500 font-light leading-relaxed border-t border-stone-100 mt-4">
           {description}
         </p>
@@ -48,28 +47,29 @@ const TeamMemberCard = ({ name, role, description, image, delay }) => {
 const OurPeople = () => {
   const team = [
     {
-      name: "Motilal Patidar",
-      role: "Founder & Visionary",
-      description: "With a deep reverence for the land, Motilal guides the estate with a focus on long-term sustainability and world-class viticulture.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop"
+      name: "Mr. Motilal Ji Patidar",
+      role: "MD & CEO",
+      description: "As the Managing Director and CEO, Mr. Motilal Ji Patidar leads the organization with a clear vision, strategic foresight, and a strong commitment to sustainable growth and excellence.",
+      image: "img/1.jpeg"
     },
     {
-      name: "Elena Rossi",
-      role: "Chief Winemaker",
-      description: "Elena brings a decade of international expertise, blending traditional European techniques with the unique terroir of Central India.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"
+      name: "Dr. Jitendra Patidar",
+      role: "Director Production & Chief Winemaker",
+      description: "Dr. Jitendra Patidar oversees production and winemaking, combining scientific expertise with innovative techniques to ensure consistent quality and world-class standards.",
+      image: "img/2.jpeg"
     },
     {
-      name: "Rajesh Kumar",
-      role: "Head of Viticulture",
-      description: "Our vineyard's health is Rajesh's life work. He ensures every vine is nurtured to produce the high-consistency grapes Ambi is known for.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop"
+      name: "Mr. Amrit Patidar",
+      role: "Director Finance",
+      description: "Mr. Amrit Patidar manages the financial strategy and operations, ensuring fiscal discipline, transparency, and long-term financial stability for the organization.",
+      image: "img/3.jpeg"
     }
+
   ];
 
   return (
     <div className="bg-[#FCFBFA] min-h-screen font-sans text-stone-900 pb-24">
-      
+
       {/* 1. CINEMATIC HERO SECTION */}
       <section
         className="relative pt-40 pb-24 px-6 text-center bg-cover bg-center overflow-hidden"
@@ -105,7 +105,7 @@ const OurPeople = () => {
       <section className="px-6 max-w-7xl mx-auto mt-30">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20">
           {team.map((person, index) => (
-            <TeamMemberCard 
+            <TeamMemberCard
               key={person.name}
               {...person}
               delay={index * 150}
@@ -118,9 +118,9 @@ const OurPeople = () => {
       <section className="mt-30 bg-stone-900 text-stone-100 py-32 px-6 overflow-hidden relative">
         {/* Subtle Grain Texture Placeholder */}
         <div className="absolute inset-0 opacity-10 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')]" />
-        
+
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <span className="text-[10px] uppercase tracking-[0.5em] text-stone-500 font-bold mb-8 block">
+          <span className="text-[10px] uppercase tracking-[0.5em] font-bold mb-8 block" style={{ color: '#811331' }}>
             Our Culture
           </span>
           <h2 className="text-3xl md:text-5xl font-serif italic mb-12">

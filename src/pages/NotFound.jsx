@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Home, ArrowLeft } from 'lucide-react';
 import './NotFound.css';
+import Button from '../Components/Button';
 
 function NotFound() {
   return (
@@ -16,13 +17,10 @@ function NotFound() {
             <Home size={20} />
             Back to Home
           </Link>
-          <button 
-            onClick={() => window.history.back()}
-            className="not-found-button secondary"
-          >
+          <Button variant="outline" onClick={() => window.history.back()}>
             <ArrowLeft size={20} />
             Go Back
-          </button>
+          </Button>
         </div>
       </div>
     </div>

@@ -18,7 +18,7 @@ const FranchisePage = () => {
 
                 {/* Content */}
                 <div className="relative max-w-4xl mx-auto">
-                    <span className="text-[10px] uppercase tracking-[0.5em] text-white/70 mb-4 block font-bold">
+                    <span className="text-[10px] uppercase tracking-[0.5em] text-[#f3d2dd] mb-4 block font-bold">
                         Partnership Opportunity
                     </span>
 
@@ -26,7 +26,7 @@ const FranchisePage = () => {
                         Cultivate the Legacy
                     </h1>
 
-                    <nav className="flex items-center justify-center space-x-3 text-[10px] uppercase tracking-widest text-white/70">
+                    <nav className="flex items-center justify-center space-x-3 text-[10px] uppercase tracking-widest text-[#f3d2dd]">
                         <a href="/" className="hover:text-white transition-colors">
                             Home
                         </a>
@@ -67,14 +67,14 @@ const FranchisePage = () => {
                                 />
                             </div>
                             <div className="absolute -bottom-10 -right-10 bg-white p-10 rounded-[2rem] shadow-xl hidden md:block">
-                                <span className="text-[10px] uppercase tracking-[0.4em] text-stone-400 block mb-2 font-bold">Status</span>
+                            <span className="text-[10px] uppercase tracking-[0.4em] block mb-2 font-bold" style={{ color: '#811331' }}>Status</span>
                                 <span className="text-2xl font-serif italic text-stone-900">Est. Heritage</span>
                             </div>
                         </div>
 
                         {/* Content Side */}
                         <div className="lg:col-span-5 lg:col-start-8">
-                            <span className="text-[10px] uppercase tracking-[0.5em] text-stone-400 mb-4 block">Your Path to Success</span>
+                            <span className="text-[10px] uppercase tracking-[0.5em] mb-4 block" style={{ color: '#811331' }}>Your Path to Success</span>
                             <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-12 italic">Why Partner with Ambi?</h2>
 
                             <div className="space-y-12">
@@ -118,7 +118,7 @@ const FranchisePage = () => {
                 <div className="max-w-5xl mx-auto">
                     <div className="bg-[#FDFCFB] border border-stone-100 p-12 md:p-24 rounded-[4rem] shadow-sm">
                         <div className="text-center mb-20">
-                            <span className="text-[10px] uppercase tracking-[0.6em] text-stone-400 block mb-6">Partnership Inquiry</span>
+                            <span className="text-[10px] uppercase tracking-[0.6em] block mb-6" style={{ color: '#811331' }}>Partnership Inquiry</span>
                             <h2 className="text-4xl md:text-5xl font-serif italic">Express Your Interest</h2>
                         </div>
 
@@ -156,9 +156,17 @@ const FranchisePage = () => {
                             </div>
 
                             <div className="text-center pt-8">
-                                <button className="group relative px-16 py-5 bg-stone-900 text-white overflow-hidden rounded-full shadow-lg transition-transform hover:-translate-y-1">
-                                    <span className="relative z-10 text-[10px] tracking-[0.4em] uppercase font-bold">Submit Inquiry</span>
-                                    <div className="absolute inset-0 bg-stone-800 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                                <button
+                                    type="submit"
+                                    className="group relative inline-flex items-center justify-center px-16 py-4 border border-[#811331] text-[#811331] overflow-hidden rounded-full shadow-lg transition-all duration-300 ease-out hover:text-white hover:-translate-y-1"
+                                >
+                                    <span className="relative z-10 text-[10px] tracking-[0.4em] uppercase font-bold">
+                                        Submit Inquiry
+                                    </span>
+                                    <div
+                                        className="absolute inset-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.25,1)]"
+                                        style={{ backgroundColor: '#811331' }}
+                                    />
                                 </button>
                             </div>
                         </form>

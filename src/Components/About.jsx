@@ -60,7 +60,7 @@ const StorySection = () => {
             </div>
 
             {/* Decorative Geometry */}
-            <div className="absolute top-12 -left-12 w-48 h-48 border-[0.5px] border-amber-900/10 -z-0" />
+            <div className="absolute top-12 -left-12 w-48 h-48 border-[0.5px] -z-0" style={{ borderColor: 'rgba(129, 19, 49, 0.1)' }} />
           </div>
 
           {/* Text Side */}
@@ -68,15 +68,15 @@ const StorySection = () => {
             isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-16'
           }`}>
             <div className="flex items-center gap-3 mb-8">
-              <span className="w-6 h-[1px] bg-amber-900/30" />
-              <span className="text-[10px] uppercase tracking-[0.5em] text-stone-500 font-medium font-sans">
+              <span className="w-6 h-[1px]" style={{ backgroundColor: 'rgba(129, 19, 49, 0.3)' }} />
+              <span className="text-[10px] uppercase tracking-[0.5em] font-medium font-sans" style={{ color: '#811331' }}>
                 Our Heritage
               </span>
             </div>
             
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-stone-900 leading-[1.1] mb-10 md:mb-16">
               A Legacy Poured <br /> 
-              <span className="italic text-amber-900/80">With Intention</span>
+              <span className="italic" style={{ color: 'rgba(129, 19, 49, 0.8)' }}>With Intention</span>
             </h2>
 
             <div className="space-y-8">
@@ -94,17 +94,18 @@ const StorySection = () => {
               </p>
 
               <div className="pt-10">
-                <a 
-                  href="#" 
-                  className="inline-flex flex-col group"
+                <button
+                  type="button"
+                  className="group relative inline-flex items-center justify-center px-10 md:px-12 py-4 border border-[#811331] text-[#811331] overflow-hidden transition-all duration-300 ease-out hover:text-white"
                 >
-                  <span className="text-stone-900 uppercase text-[11px] tracking-[0.4em] font-bold transition-colors group-hover:text-amber-900 font-sans">
+                  <span className="relative z-10 uppercase text-[11px] tracking-[0.4em] font-bold font-sans">
                     Discover Our Philosophy
                   </span>
-                  <div className="mt-2 h-[1px] w-full bg-stone-200 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-stone-900 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500" />
-                  </div>
-                </a>
+                  <div
+                    className="absolute inset-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.25,1)]"
+                    style={{ backgroundColor: '#811331' }}
+                  />
+                </button>
               </div>
             </div>
           </div>

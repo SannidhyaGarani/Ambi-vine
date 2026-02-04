@@ -15,6 +15,8 @@ import Preloader from "./Components/Preloader";
 import OurStory from "./pages/OrStory";
 import OurVineyards from "./pages/OurVineyards";
 import OurPeople from "./pages/OurPeople";
+import WineDetail from "./pages/WineDetail.jsx";
+import Wishlist from "./pages/Wishlist.jsx";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -39,6 +41,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/wines/:category" element={<WinesByCategory />} />
+        <Route path="/wine/:id" element={<WineDetail />} />
+        <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/stores" element={<OutletPage />} />
         <Route path="/book-tour" element={<TourPage />} />
         <Route path="/partner" element={<FranchisePage />} />
