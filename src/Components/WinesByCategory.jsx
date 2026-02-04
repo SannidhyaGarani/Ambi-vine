@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-// import Header from '../components/Header';
+// import Header from '../Components/Header';
 // import Footer from './Footer';
 import WineCard from './WineCard';
 import { WINE_LIST, CATEGORY_INFO } from '../data/wines';
