@@ -4,7 +4,7 @@ import "./App.css";
 
 import Home from "./pages/Home";
 import WinesByCategory from "./Components/WinesByCategory";
-import Header from "./components/Header";
+import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import OutletPage from "./pages/Store";
 import TourPage from "./pages/Tour";
