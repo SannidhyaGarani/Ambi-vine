@@ -63,7 +63,20 @@ const OurPeople = () => {
       role: "Director Finance",
       description: "Mr. Amrit Patidar manages the financial strategy and operations, ensuring fiscal discipline, transparency, and long-term financial stability for the organization.",
       image: "img/3.jpeg"
+    },
+    {
+      name: "Rajesh Patidar",
+      role: "Director Marketing and Sales",
+      description: "Rajesh Patidar drives brand growth and market expansion through strategic marketing and sales leadership, strengthening the company’s presence across domestic and global markets.",
+      image: "img/4.jpeg"
+    },
+    {
+      name: "Dr. Amit Nigam",
+      role: "Manager – Events & International Sales",
+      description: "Dr. Amit Nigam manages high-impact events and international sales initiatives, building strong global relationships and promoting the brand on international platforms.",
+      image: "img/5.jpeg"
     }
+
 
   ];
 
@@ -115,29 +128,59 @@ const OurPeople = () => {
       </section>
 
       {/* 3. PHILOSOPHY SECTION */}
-      <section className="mt-30 bg-stone-900 text-stone-100 py-32 px-6 overflow-hidden relative">
-        {/* Subtle Grain Texture Placeholder */}
-        <div className="absolute inset-0 opacity-10 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')]" />
+      <section className="bg-[#811331] text-white py-22 px-6 overflow-hidden relative mt-20">
+        {/* Sophisticated Texture Overlay */}
+        <div className="absolute inset-0 opacity-10 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/asfalt-dark.png')]" />
 
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <span className="text-[10px] uppercase tracking-[0.5em] font-bold mb-8 block" style={{ color: '#811331' }}>
-            Our Culture
-          </span>
-          <h2 className="text-3xl md:text-5xl font-serif italic mb-12">
-            "Craftsmanship is an act <br className="hidden md:block" /> of patience and integrity."
+        {/* Radial Glow for Depth */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08)_0%,transparent_70%)] pointer-events-none" />
+
+        <div className="max-w-5xl mx-auto text-center relative z-10">
+          {/* Section Header */}
+          <div className="flex flex-col items-center mb-12">
+            <span className="text-[10px] uppercase tracking-[0.6em] font-bold mb-4 opacity-80">
+              Our Culture
+            </span>
+            {/* Short Vertical Divider */}
+            <div className="w-[1px] h-10 bg-white/30 mb-8" />
+          </div>
+
+          {/* Main Quote */}
+          <h2 className="text-3xl md:text-6xl font-serif italic mb-20 leading-[1.2] text-stone-50">
+            "Craftsmanship is an act <br className="hidden md:block" />
+            of patience and integrity."
           </h2>
-          <div className="grid md:grid-cols-3 gap-12 pt-12 border-t border-stone-800">
-            <div>
-              <h4 className="text-xs uppercase tracking-widest font-bold mb-4 text-stone-300">Unity</h4>
-              <p className="text-sm text-stone-500 font-light leading-relaxed">We work as a single ecosystem, where every role is vital to the final pour.</p>
+
+          {/* Values Grid */}
+          <div className="grid md:grid-cols-3 gap-16 pt-16 border-t border-white/20">
+            <div className="group">
+              <h4 className="text-xs uppercase tracking-[0.3em] font-bold mb-6 text-white">
+                Unity
+              </h4>
+              <p className="text-[13px] text-stone-200 font-light leading-relaxed px-4 opacity-80 group-hover:opacity-100 transition-opacity">
+                We work as a single ecosystem, where every role is vital to the final pour.
+              </p>
             </div>
-            <div>
-              <h4 className="text-xs uppercase tracking-widest font-bold mb-4 text-stone-300">Stewardship</h4>
-              <p className="text-sm text-stone-500 font-light leading-relaxed">We are temporary guardians of this land, committed to its health for future eras.</p>
+
+            <div className="group relative">
+              {/* Subtle Side Borders for Desktop */}
+              <div className="hidden md:block absolute left-[-2rem] top-0 bottom-0 w-[1px] bg-white/10" />
+              <h4 className="text-xs uppercase tracking-[0.3em] font-bold mb-6 text-white">
+                Stewardship
+              </h4>
+              <p className="text-[13px] text-stone-200 font-light leading-relaxed px-4 opacity-80 group-hover:opacity-100 transition-opacity">
+                We are temporary guardians of this land, committed to its health for future eras.
+              </p>
+              <div className="hidden md:block absolute right-[-2rem] top-0 bottom-0 w-[1px] bg-white/10" />
             </div>
-            <div>
-              <h4 className="text-xs uppercase tracking-widest font-bold mb-4 text-stone-300">Excellence</h4>
-              <p className="text-sm text-stone-500 font-light leading-relaxed">Good is never enough. We chase the world-class standard in every bottle.</p>
+
+            <div className="group">
+              <h4 className="text-xs uppercase tracking-[0.3em] font-bold mb-6 text-white">
+                Excellence
+              </h4>
+              <p className="text-[13px] text-stone-200 font-light leading-relaxed px-4 opacity-80 group-hover:opacity-100 transition-opacity">
+                Good is never enough. We chase the world-class standard in every bottle.
+              </p>
             </div>
           </div>
         </div>
